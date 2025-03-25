@@ -427,7 +427,10 @@
       width: 400px;
      height:auto;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
+      transition:  0.5s;
+    }
+    .project1:hover{
+      background-color: #f3f7ff;
     }
     .project_img{
       height: auto;
@@ -490,7 +493,6 @@
     font-size: 14px;
     font-weight: bold;
     color: #2c3e50;
-    border: 1px solid rgba(128, 128, 128, 0.32);
    
     justify-content: left;
     height:fit-content;
@@ -507,13 +509,12 @@
   justify-content: left;
 }
 .tool {
-    background:rgba(0, 0, 0, 0.687);
-    color: white;
+    background:transparent;
+    color: rgb(0, 0, 0);
     padding: 5px 10px;
-    border-radius: 4px;
     font-size: 13px;
-    font-weight: 600;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    font-weight: 400;
+   border: 1px solid black;
     transition: 0.3s ease-in-out;
     margin: 5px 1px;
     
@@ -665,7 +666,7 @@
       border-radius: 10px;
     }
 
-    @media (max-width:600px) {
+    @media (max-width:690px) {
 
       nav {
         display: flex;
@@ -681,31 +682,50 @@
 
       .skill-graph {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         width: 100%;
-
+        gap:10px;
+        justify-content: center;
+        align-items: center;
       }
 
       .graph1 {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         padding: 30px;
-        width: 100%;
-        height: 100px;
-
+        margin: 0px;
+        width: 40%;
+        height: 110px;
+       gap: 10px;
+       border-radius: 10px;
+       justify-content: center;
+       align-items: center;
       }
-
+     .graph1 .skill_image{
+     
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+        width: 30px;
+     }
       .graph1 h5 {
         font-size: 18px;
       }
-
+     .graph1 .skill_name{
+      display: none;
+      position: relative;
+     }
       .graph1 img {
-        height: 30px;
-        width: 30px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        margin-right: 0px;
       }
 
       .graph_line {
         height: 8px;
+        border-radius: 5px;
       }
 
       .skill-img {
@@ -727,6 +747,21 @@
         align-items: start;
 
       }
+    }
+
+    @media (max-width:770px){
+       .graph1{
+        height: 120px;
+        justify-content: space-evenly;
+        display: flex;
+        align-items: center;
+       }
+       .graph1 img{
+        margin-right: 0px;
+       }
+       .graph_line{
+        margin-top: 20px;
+       }
     }
     
   </style>
@@ -833,31 +868,36 @@
       <h2>Open Source Projects</h2>
     </div>
     <div class="projects-list">
-      <div class="project1">
-        <img src="https://media-hosting.imagekit.io//1351650a025843aa/LMS%20IMG%20(1).png?Expires=1836881633&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Grc5gMKr3MdyO~rmBotHF9lMilk3X820WrBheD92tMcBR4lmcwtxetr-Zi0GG4-AE7dcVP9jy~AtGx~LyusjBtmb4jk37259lA9sGcrdW21C4J-MCI6~I6dn6-R2jrjUV7O3bbZbZte8wJrj0Kii6PEQrMiRV0lMsfPj7g0o9bXbO0FvhW2355amjmVyX04aSwI42XGOMEF8DodG8qYSLxnEVkG7FHnpmqhSlFn6EFd7sFLS7jZ2N2ekAqW20QeEcigiKdXAnNsgxfDGxxnU7sdzJzpLHUhcH-NVb~Fu6wP3UspiksndvVi5s72KnM-U584lS6TDIXoQJAECVN0W~Q__" class="project_img">
-        <div class="project_desc">
-            <div class="project-name">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Vi9e07F1AHCu7v0eOzal657GthIH1hXzbQ&s" />
-                <a href="https://github.com/santoshhadiya/shoeshop-ecommerce.git">
-                    <h3>SkillForge</h3>
-                </a>
-            </div>
-            <div class="project-disc">
-                A comprehensive LMS built for universities, businesses, and educators to manage courses, quizzes, and certifications.
+      
+        <div class="project1">
+          <img src="https://media-hosting.imagekit.io//1351650a025843aa/LMS%20IMG%20(1).png?Expires=1836881633&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Grc5gMKr3MdyO~rmBotHF9lMilk3X820WrBheD92tMcBR4lmcwtxetr-Zi0GG4-AE7dcVP9jy~AtGx~LyusjBtmb4jk37259lA9sGcrdW21C4J-MCI6~I6dn6-R2jrjUV7O3bbZbZte8wJrj0Kii6PEQrMiRV0lMsfPj7g0o9bXbO0FvhW2355amjmVyX04aSwI42XGOMEF8DodG8qYSLxnEVkG7FHnpmqhSlFn6EFd7sFLS7jZ2N2ekAqW20QeEcigiKdXAnNsgxfDGxxnU7sdzJzpLHUhcH-NVb~Fu6wP3UspiksndvVi5s72KnM-U584lS6TDIXoQJAECVN0W~Q__" class="project_img">
+
+          <a href="https://santoshhadiya.github.io/edemy/">
+          <div class="project_desc">
+              <div class="project-name">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Vi9e07F1AHCu7v0eOzal657GthIH1hXzbQ&s" />
+                  
+                      <h3>SkillForge</h3>
+                  
+              </div>
+              <div class="project-disc">
+                  A comprehensive LMS built for universities, businesses, and educators to manage courses, quizzes, and certifications.
+              </div>
+      
+              <div class="project-tools">
+                <strong>Tools Used:</strong>
+                <div class="tools">
+                  <span class="tool">HTML</span>
+                <span class="tool">CSS</span>
+                <span class="tool">JavaScript</span>
+                <span class="tool">React.js</span>
+                </div>
             </div>
     
-            <div class="project-tools">
-              <strong>Tools Used:</strong>
-              <div class="tools">
-                <span class="tool">HTML</span>
-              <span class="tool">CSS</span>
-              <span class="tool">JavaScript</span>
-              <span class="tool">React.js</span>
-              </div>
           </div>
-  
-        </div>
-    </div>
+        </a>
+      </div>
+     
     
       <div class="project1">
         <img src="https://media-hosting.imagekit.io//3f21aea975964d89/BOOTSRAP%20IMG.png?Expires=1836881598&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=txfxYZgwRhb6F6bG0MCu0u4hRnkJuavJrGA7bOlWtKIhaCzLbS0nYnRdErPhkXM6YAMDeJFT69L6k1yJc4fax6p3a6k1nF6bwwZFjAesMdzc54Cj2RDdc7-CIxarQoAqs-gU7o6I4CLaECogKbr46UwqTYsd6bFI75rm8Iku7CPvFGK4XO~jnN5OzH5hd9BJwRRjq-iyCLDFYNbh0k2Md-PbMXMcUeXa2tEvsvv3vWYgRqvtCFAkHPiZqM8xNXrdXUb5sG-Ou-uhUIqnJMKFQlc4GYyVVkkgzBHep~0oLY4XfmxsxvBYqcxgf6DBmCFU5PZpPJq-izfcVxb-tJX29g__" class="project_img">
@@ -922,8 +962,10 @@
               <span class="tool">HTML</span>
             <span class="tool">CSS</span>
             <span class="tool">JavaScript</span>
-            <span class="tool">React.js</span>
-            <span class="tool">Node js</span>
+            <span class="tool">React Js</span>
+            <span class="tool">Node Js</span>
+            <span class="tool">Express Js</span>
+            <span class="tool">MongoDB</span>
             </div>
         </div>
         </div>
@@ -1019,8 +1061,10 @@
         skillElement.classList.add("graph1");
 
         skillElement.innerHTML = `
-      <img src="${skill.img}" alt="${skill.name} Icon" />
-      <h5>${skill.name}</h5>
+      <div class="skill_image">
+        <img src="${skill.img}" alt="${skill.name} Icon" />
+        </div>
+      <h5 class="skill_name">${skill.name}</h5>
       <h5>${skill.level}%</h5>
       <div class="graph_line">
         <div class="line" style="width: ${skill.level}%;"></div>
