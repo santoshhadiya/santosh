@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santosh Hadiya - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+  <!-- Navigation -->
+  <header class="bg-transparent py-4 px-8 fixed w-full z-10">
+    <nav class="flex justify-between items-center">
+      <div class="text-2xl font-bold" style="font-family: 'Pacifico', cursive">
+        Santosh <span class="text-amber-700">Hadiya</span>
+      </div>
+      <ul class="flex space-x-8">
+        <li><a href="#home" class="text-gray-800 hover:text-amber-700 font-medium">Home</a></li>
+        <li><a href="#about" class="text-gray-800 hover:text-amber-700 font-medium">About</a></li>
+        <li><a href="#skills" class="text-gray-800 hover:text-amber-700 font-medium">Skills</a></li>
+        <li><a href="#work" class="text-gray-800 hover:text-amber-700 font-medium">Work</a></li>
+        <li><a href="#contact" class="text-gray-800 hover:text-amber-700 font-medium">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-between px-8 py-32">
+    <div class="max-w-xl">
+      <h1 class="text-5xl font-bold leading-tight">
+        Hi,<br>
+        I'm <span class="text-amber-700">Santosh</span>
+      </h1>
+      <h2 class="text-4xl font-bold mt-2">Web Developer</h2>
+      <p class="text-lg text-gray-600 mt-4">
+        Creating modern, responsive web applications with clean code and intuitive interfaces.
+      </p>
+      <a href="#contact" class="inline-block mt-6 px-8 py-3 bg-amber-700 text-white rounded-md hover:bg-blue-700 transition">
+        Contact Me
+      </a>
+      <div class="flex mt-8 space-x-4">
+        <a href="#" class="hover:opacity-80 transition">
+          <img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-black-and-white-logos/1000/2018_social_media_popular_app_logo_linkedin-512.png" 
+               alt="LinkedIn" class="w-6 h-6">
+        </a>
+        <a href="https://www.instagram.com/santoshhadiya33/?__pwa=1" class="hover:opacity-80 transition">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvlgFayKGermPfHF3UJOVdKYAnMpCl3Ud8vw&s" 
+               alt="Instagram" class="w-6 h-6">
+        </a>
+        <a href="https://github.com/santoshhadiya" class="hover:opacity-80 transition">
+          <img src="https://pngimg.com/d/github_PNG71.png" 
+               alt="GitHub" class="w-6 h-6">
+        </a>
+      </div>
+    </div>
+    <div class="hidden md:block">
+      <img src="santoshhadiya.jpg" alt="Santosh Hadiya" 
+           class="w-80 h-80 rounded-full shadow-md hover:scale-105 transition">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white bg-opacity-30">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-amber-700 mb-16 relative after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-700 after:mx-auto after:mt-2">
+        About
+      </h2>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+        <img src="santosh.jpg" alt="Santosh Hadiya" 
+             class="w-64 h-64 rounded-lg shadow-md md:mr-12">
+        <div class="max-w-md">
+          <h3 class="text-2xl font-bold mb-4">I'm Santosh</h3>
+          <p class="text-gray-700">
+            I am a dedicated BCA student specializing in web development with a
+            strong foundation in HTML, CSS, JavaScript, and Java. I am committed
+            to continually advancing my skills and contributing to innovative
+            web development projects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-amber-700 mb-16 relative after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-700 after:mx-auto after:mt-2">
+        Skills
+      </h2>
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <h3 class="text-2xl font-bold mb-4">Professional Skills</h3>
+          <p class="text-gray-600 mb-8">
+            I possess strong skills in HTML, CSS, JavaScript, SQL, Java, and
+            Bootstrap, with expertise in creating responsive, dynamic websites
+            and database management.
+          </p>
+          <div id="skillGraph" class="grid grid-cols-2 gap-4"></div>
+          <div class="mt-8">
+            <h3 class="text-xl font-bold mb-2">Resume</h3>
+            <p class="text-gray-700">
+              For a more detailed overview of my skills and experience, you can
+              download my <a href="https://drive.google.com/file/d/1hf7hbgv5k153c_i0s5HFQ1aAiE9afyzp/view?usp=sharing" 
+              target="_blank" class="text-amber-700 hover:underline">resume</a>.
+            </p>
+          </div>
+        </div>
+        <div class="lg:w-1/2">
+          <img src="https://media.istockphoto.com/id/1250276441/vector/%D1%81reative-of-business-graphics-the-company-is-engaged-in-joint-search-for-ideas-abstract.jpg?s=612x612&w=0&k=20&c=Rt6CPaK_ydUf3c5Btri-AkAYkC-bQDABz3l7EpblUXI=" 
+               alt="Skills illustration" class="rounded-lg shadow-md w-full max-w-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="work" class="py-20 bg-white bg-opacity-30">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-amber-700 mb-16 relative after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-700 after:mx-auto after:mt-2">
+        Projects
+      </h2>
+      <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-3xl font-bold text-center text-amber-700 mb-16 relative after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-700 after:mx-auto after:mt-2">
+        Contact
+      </h2>
+      <p class="text-gray-700 mb-8">Reach out to me through the following platforms:</p>
+      <div id="contactInfo" class="flex flex-col md:flex-row justify-center gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between gap-8">
+        <div class="md:w-1/3">
+          <h2 class="text-2xl font-bold mb-4">Santosh Hadiya</h2>
+          <p class="text-gray-400">
+            I am committed to continually advancing my skills and contributing
+            to innovative web development projects.
+          </p>
+        </div>
+        <div class="md:w-1/3">
+          <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <img src="https://toppng.com/uploads/thumbnail/white-location-icon-png-location-logo-png-white-11562856661b4wsud8br0.png" 
+                   alt="Location" class="w-5 h-5 mr-2">
+              Ahmedabad, Gujarat
+            </li>
+            <li class="flex items-center">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD3ytIA6zKKo4N3qfvde_BYOlsQstSkNLewA&s" 
+                   alt="Education" class="w-5 h-5 mr-2">
+              Som-lalit Institute of Computer Application
+            </li>
+            <li class="flex items-center">
+              <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/m_collection_png/512x512/plain/university.png" 
+                   alt="University" class="w-5 h-5 mr-2">
+              Gujarat University
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 Santosh Hadiya. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript will be loaded here -->
+  <script src="app.js"></script>
+</body>
+</html>
