@@ -81,67 +81,84 @@ document.addEventListener('DOMContentLoaded', function() {
   renderContactInfo();
   setupSmoothScrolling();
 
-  // Function to render skills
-  function renderSkills() {
-    const skillGraph = document.getElementById('skillGraph');
+ // Updated renderSkills function in app.js
+function renderSkills() {
+  const skillGraph = document.getElementById('skillGraph');
+  
+  skills.forEach(skill => {
+    const skillElement = document.createElement('div');
+    skillElement.className = 'bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 flex items-start';
     
-    skills.forEach(skill => {
-      const skillElement = document.createElement('div');
-      skillElement.className = 'bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition flex flex-col items-center';
-      
-      skillElement.innerHTML = `
-        <div class="w-8 h-8 mb-2">
-          <img src="${skill.img}" alt="${skill.name}" class="w-full h-full object-contain">
+    skillElement.innerHTML = `
+      <div class="flex-shrink-0 bg-amber-50 p-3 rounded-lg mr-4">
+        <img src="${skill.img}" alt="${skill.name}" class="w-8 h-8 object-contain">
+      </div>
+      <div class="flex-grow">
+        <h5 class="font-bold text-gray-800 mb-1">${skill.name}</h5>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-xs text-gray-500">Proficiency</span>
+          <span class="text-sm font-bold text-amber-700">${skill.level}%</span>
         </div>
-        <h5 class="font-medium text-gray-800">${skill.name}</h5>
-        <span class="text-sm text-amber-700 font-bold">${skill.level}%</span>
-        <div class="w-full h-2 bg-gray-200 rounded-full mt-2 overflow-hidden">
-          <div class="h-full bg-gray-800 rounded-full" style="width: ${skill.level}%"></div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+          <div class="bg-amber-700 h-2 rounded-full" style="width: ${skill.level}%"></div>
         </div>
-      `;
-      
-      skillGraph.appendChild(skillElement);
-    });
-  }
-
-  // Function to render projects
-  function renderProjects() {
-    const projectsGrid = document.getElementById('projectsGrid');
-   projects.forEach(project => {
-  const projectElement = document.createElement('div');
-  projectElement.className = 'bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200';
-
-  projectElement.innerHTML = `
-    <div class="overflow-hidden">
-      <img src="${project.image}" alt="${project.title}" 
-           class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105">
-    </div>
-    <div class="p-5 space-y-3">
-      <div class="flex items-center">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Vi9e07F1AHCu7v0eOzal657GthIH1hXzbQ&s" 
-             alt="Project icon" class="w-6 h-6 mr-2">
-        <h3 class="text-xl font-semibold text-gray-800 hover:text-blue-600 transition duration-200">${project.title}</h3>
       </div>
-      <p class="text-gray-600 text-sm">${project.description}</p>
-      <div class="flex flex-wrap gap-2 items-center">
-        <span class="text-sm font-semibold text-gray-700">Tools:</span>
-        ${project.tools.map(tool => 
-          `<span class="text-xs bg-gray-100 border border-gray-300 px-2 py-0.5 rounded-md text-gray-800">${tool}</span>`
-        ).join('')}
-      </div>
-      <div class="flex gap-3 pt-3">
-        <a href="${project.code}" target="_blank" 
-           class="px-4 py-1.5 text-sm font-medium rounded-md bg-gray-800 text-white hover:bg-gray-700 transition">View Code</a>
-        <a href="${project.link}" target="_blank" 
-           class="px-4 py-1.5 text-sm font-medium rounded-md bg-blue-600 text-white hover:bg-blue-500 transition">Live Demo</a>
-      </div>
-    </div>
-  `;
+    `;
+    
+    skillGraph.appendChild(skillElement);
+  });
+}
 
-  projectsGrid.appendChild(projectElement);
-});
-
-  }
+ // Updated renderProjects function in app.js
+function renderProjects() {
+  const projectsGrid = document.getElementById('projectsGrid');
+  
+  projects.forEach(project => {
+    const projectElement = document.createElement('div');
+    projectElement.className = 'bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col';
+    
+    projectElement.innerHTML = `
+      <div class="relative overflow-hidden h-48">
+        <img src="${project.image}" alt="${project.title}" 
+             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+      </div>
+      <div class="p-6 flex-grow flex flex-col">
+        <div class="flex items-center mb-3">
+          <i class="fas fa-project-diagram text-amber-700 mr-2"></i>
+          <h3 class="text-xl font-bold text-gray-800">${project.title}</h3>
+        </div>
+        <p class="text-gray-600 mb-4 flex-grow">${project.description}</p>
+        
+        <div class="mb-4">
+          <h4 class="text-sm font-semibold text-gray-700 mb-2">Technologies Used:</h4>
+          <div class="flex flex-wrap gap-2">
+            ${project.tools.map(tool => 
+              `<span class="text-xs bg-gray-100 px-3 py-1 rounded-full text-gray-800">${tool}</span>`
+            ).join('')}
+          </div>
+        </div>
+        
+        <div class="flex gap-3 pt-2 mt-auto">
+          ${project.code ? `
+            <a href="${project.code}" target="_blank" 
+               class="flex-1 flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition">
+              <i class="fas fa-code"></i>
+              Code
+            </a>
+          ` : ''}
+          <a href="${project.link}" target="_blank" 
+             class="flex-1 flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-amber-700 text-white hover:bg-amber-800 transition">
+            <i class="fas fa-external-link-alt"></i>
+            Demo
+          </a>
+        </div>
+      </div>
+    `;
+    
+    projectsGrid.appendChild(projectElement);
+  });
+}
 
   // Function to render contact info
   function renderContactInfo() {

@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Santosh Hadiya - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-gray-50 font-sans text-gray-800">
   <!-- Navigation -->
-  <header class="bg-transparent py-4 px-8 fixed w-full z-10">
-    <nav class="flex justify-between items-center">
-      <div class="text-2xl font-bold" style="font-family: 'Pacifico', cursive">
-        Santosh <span class="text-amber-700">Hadiya</span>
+  <header class="bg-white shadow fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-3xl font-bold text-amber-700" style="font-family: 'Pacifico', cursive;">
+        Santosh <span class="text-gray-800">Hadiya</span>
       </div>
-      <ul class="flex space-x-8">
-        <li><a href="#home" class="text-gray-800 hover:text-amber-700 font-medium">Home</a></li>
-        <li><a href="#about" class="text-gray-800 hover:text-amber-700 font-medium">About</a></li>
-        <li><a href="#skills" class="text-gray-800 hover:text-amber-700 font-medium">Skills</a></li>
-        <li><a href="#work" class="text-gray-800 hover:text-amber-700 font-medium">Work</a></li>
-        <li><a href="#contact" class="text-gray-800 hover:text-amber-700 font-medium">Contact</a></li>
-      </ul>
-    </nav>
+
+      <button id="navToggle" class="lg:hidden text-gray-800 text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="navMenu" class="hidden lg:flex space-x-8">
+        <a href="#home" class="text-gray-800 hover:text-amber-700 font-medium">Home</a>
+        <a href="#about" class="text-gray-800 hover:text-amber-700 font-medium">About</a>
+        <a href="#skills" class="text-gray-800 hover:text-amber-700 font-medium">Skills</a>
+        <a href="#work" class="text-gray-800 hover:text-amber-700 font-medium">Work</a>
+        <a href="#contact" class="text-gray-800 hover:text-amber-700 font-medium">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="lg:hidden hidden bg-white px-6 pb-4">
+      <a href="#home" class="block py-2 text-gray-800 hover:text-amber-700">Home</a>
+      <a href="#about" class="block py-2 text-gray-800 hover:text-amber-700">About</a>
+      <a href="#skills" class="block py-2 text-gray-800 hover:text-amber-700">Skills</a>
+      <a href="#work" class="block py-2 text-gray-800 hover:text-amber-700">Work</a>
+      <a href="#contact" class="block py-2 text-gray-800 hover:text-amber-700">Contact</a>
+    </div>
   </header>
 
   <!-- Hero Section -->
@@ -36,104 +52,335 @@
       <p class="text-lg text-gray-600 mt-4">
         Creating modern, responsive web applications with clean code and intuitive interfaces.
       </p>
-      <a href="#contact" class="inline-block mt-6 px-8 py-3 bg-amber-700 text-white rounded-md hover:bg-blue-700 transition">
+      <a href="#contact"
+        class="inline-block mt-6 px-8 py-3 bg-amber-700 text-white rounded-md hover:bg-amber-800 transition">
         Contact Me
       </a>
       <div class="flex mt-8 space-x-4">
         <a href="#" class="hover:opacity-80 transition">
-          <img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-black-and-white-logos/1000/2018_social_media_popular_app_logo_linkedin-512.png" 
-               alt="LinkedIn" class="w-6 h-6">
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/2018-social-media-black-and-white-logos/1000/2018_social_media_popular_app_logo_linkedin-512.png"
+            alt="LinkedIn" class="w-6 h-6">
         </a>
         <a href="https://www.instagram.com/santoshhadiya33/?__pwa=1" class="hover:opacity-80 transition">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvlgFayKGermPfHF3UJOVdKYAnMpCl3Ud8vw&s" 
-               alt="Instagram" class="w-6 h-6">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvlgFayKGermPfHF3UJOVdKYAnMpCl3Ud8vw&s"
+            alt="Instagram" class="w-6 h-6">
         </a>
         <a href="https://github.com/santoshhadiya" class="hover:opacity-80 transition">
-          <img src="https://pngimg.com/d/github_PNG71.png" 
-               alt="GitHub" class="w-6 h-6">
+          <img src="https://pngimg.com/d/github_PNG71.png" alt="GitHub" class="w-6 h-6">
         </a>
       </div>
     </div>
-    <div class="hidden md:block">
-      <img src="santoshhadiya.jpg" alt="Santosh Hadiya" 
-           class="w-80 h-80 rounded-full shadow-md hover:scale-105 transition">
+    <div class="hidden lg:block relative">
+      <div class="absolute -inset-4 bg-amber-700 rounded-full opacity-10"></div>
+      <img src="santoshhadiya.jpg" alt="Santosh Hadiya"
+        class="w-96 h-96 rounded-full object-cover shadow-xl border-8 border-white relative">
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 bg-white bg-opacity-30">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-amber-700 mb-16 relative after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-700 after:mx-auto after:mt-2">
-        About
-      </h2>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-        <img src="santosh.jpg" alt="Santosh Hadiya" 
-             class="w-64 h-64 rounded-lg shadow-md md:mr-12">
-        <div class="max-w-md">
-          <h3 class="text-2xl font-bold mb-4">I'm Santosh</h3>
-          <p class="text-gray-700">
-            I am a dedicated BCA student specializing in web development with a
-            strong foundation in HTML, CSS, JavaScript, and Java. I am committed
-            to continually advancing my skills and contributing to innovative
-            web development projects.
+  <section id="about" class="py-24 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-16">
+        <span class="text-lg font-semibold text-amber-700 tracking-wider">ABOUT ME</span>
+        <h2 class="text-4xl font-bold text-gray-900 mt-2">Who I Am</h2>
+        <div class="w-20 h-1 bg-amber-700 mx-auto mt-4"></div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-center gap-12 justify-between">
+        <div class="lg:w-3/12 relative">
+          <div class="before:absolute before:-inset-4 before:bg-amber-700 before:rounded-lg before:opacity-10">
+            <img src="santosh.jpg" alt="Santosh Hadiya"
+              class="w-full h-auto rounded-lg shadow-xl object-cover border-4 border-white relative">
+          </div>
+        </div>
+
+        <div class="lg:w-7/12">
+          <h3 class="text-3xl font-bold text-gray-800 mb-6">I'm Santosh Hadiya</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            A passionate BCA student specializing in web development with expertise in modern web technologies.
+            I combine technical skills with creative problem-solving to build efficient, user-friendly digital
+            experiences.
           </p>
+
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="flex items-start">
+              <i class="fas fa-laptop-code text-amber-700 text-2xl mr-4 mt-1"></i>
+              <div>
+                <h4 class="font-bold text-gray-800 mb-1">Web Development</h4>
+                <p class="text-gray-600 text-sm">Building responsive, modern web applications</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-database text-amber-700 text-2xl mr-4 mt-1"></i>
+              <div>
+                <h4 class="font-bold text-gray-800 mb-1">Database Design</h4>
+                <p class="text-gray-600 text-sm">Creating efficient data structures</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-mobile-alt text-amber-700 text-2xl mr-4 mt-1"></i>
+              <div>
+                <h4 class="font-bold text-gray-800 mb-1">Responsive Design</h4>
+                <p class="text-gray-600 text-sm">Perfect for all devices</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-code text-amber-700 text-2xl mr-4 mt-1"></i>
+              <div>
+                <h4 class="font-bold text-gray-800 mb-1">Clean Code</h4>
+                <p class="text-gray-600 text-sm">Maintainable and efficient</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact"
+              class="px-6 py-3 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-800 transition-colors">
+              <i class="fas fa-paper-plane mr-2"></i> Contact Me
+            </a>
+            <a href="https://drive.google.com/file/d/1hf7hbgv5k153c_i0s5HFQ1aAiE9afyzp/view?usp=sharing" target="_blank"
+              class="px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-100 transition-colors">
+              <i class="fas fa-download mr-2"></i> Download CV
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-20">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-amber-700 mb-16 relative after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-700 after:mx-auto after:mt-2">
-        Skills
-      </h2>
-      <div class="flex flex-col lg:flex-row items-center gap-12">
-        <div class="lg:w-1/2">
-          <h3 class="text-2xl font-bold mb-4">Professional Skills</h3>
-          <p class="text-gray-600 mb-8">
-            I possess strong skills in HTML, CSS, JavaScript, SQL, Java, and
-            Bootstrap, with expertise in creating responsive, dynamic websites
-            and database management.
-          </p>
-          <div id="skillGraph" class="grid grid-cols-2 gap-4"></div>
-          <div class="mt-8">
-            <h3 class="text-xl font-bold mb-2">Resume</h3>
-            <p class="text-gray-700">
-              For a more detailed overview of my skills and experience, you can
-              download my <a href="https://drive.google.com/file/d/1hf7hbgv5k153c_i0s5HFQ1aAiE9afyzp/view?usp=sharing" 
-              target="_blank" class="text-amber-700 hover:underline">resume</a>.
-            </p>
-          </div>
+  <section id="skills" class="py-24 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-16">
+        <span class="text-lg font-semibold text-amber-700 tracking-wider">MY CAPABILITIES</span>
+        <h2 class="text-4xl font-bold text-gray-900 mt-2">Technical Skills</h2>
+        <div class="w-20 h-1 bg-amber-700 mx-auto mt-4"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-6">
+          I've honed these technical skills through academic projects and hands-on development experience.
+        </p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="lg:w-1/2 w-full">
+          <div id="skillGraph" class="grid grid-cols-2 gap-6"></div>
         </div>
-        <div class="lg:w-1/2">
-          <img src="https://media.istockphoto.com/id/1250276441/vector/%D1%81reative-of-business-graphics-the-company-is-engaged-in-joint-search-for-ideas-abstract.jpg?s=612x612&w=0&k=20&c=Rt6CPaK_ydUf3c5Btri-AkAYkC-bQDABz3l7EpblUXI=" 
-               alt="Skills illustration" class="rounded-lg shadow-md w-full max-w-lg">
+
+        <div class="lg:w-1/2 w-full bg-gray-50 p-8 rounded-xl border border-gray-200">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+            <i class="fas fa-chart-line text-amber-700 mr-3"></i>
+            My Expertise
+          </h3>
+
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium text-gray-800">Frontend Development</span>
+                <span class="text-amber-700 font-bold">90%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-amber-700 h-2.5 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium text-gray-800">Backend Development</span>
+                <span class="text-amber-700 font-bold">55%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-amber-700 h-2.5 rounded-full" style="width: 55%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium text-gray-800">Database Management</span>
+                <span class="text-amber-700 font-bold">70%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-amber-700 h-2.5 rounded-full" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium text-gray-800">Problem Solving</span>
+                <span class="text-amber-700 font-bold">85%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-amber-700 h-2.5 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <h4 class="text-lg font-bold text-gray-800 mb-3">Certifications</h4>
+            <div class="flex items-center text-gray-600 mb-2">
+              <i class="fas fa-certificate text-amber-700 mr-2"></i>
+              <span>Frontend Development - CodSoft</span>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="work" class="py-20 bg-white bg-opacity-30">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-amber-700 mb-16 relative after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-700 after:mx-auto after:mt-2">
-        Projects
-      </h2>
-      <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  <section id="work" class="py-24 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-16">
+        <span class="text-lg font-semibold text-amber-700 tracking-wider">MY PORTFOLIO</span>
+        <h2 class="text-4xl font-bold text-gray-900 mt-2">Recent Projects</h2>
+        <div class="w-20 h-1 bg-amber-700 mx-auto mt-4"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-6">
+          Here are some of my featured projects that demonstrate my skills and capabilities.
+        </p>
+      </div>
+
+      <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+      <div class="text-center mt-16">
+        <a href="https://github.com/santoshhadiya" target="_blank"
+          class="inline-flex items-center px-8 py-4 border border-amber-700 text-amber-700 font-medium rounded-lg hover:bg-amber-700 hover:text-white transition-colors">
+          <i class="fab fa-github mr-3"></i>
+          View All Projects on GitHub
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-white">
-    <div class="container mx-auto px-4 max-w-4xl text-center">
-      <h2 class="text-3xl font-bold text-center text-amber-700 mb-16 relative after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-700 after:mx-auto after:mt-2">
-        Contact
-      </h2>
-      <p class="text-gray-700 mb-8">Reach out to me through the following platforms:</p>
-      <div id="contactInfo" class="flex flex-col md:flex-row justify-center gap-8"></div>
+  <section id="contact" class="py-24 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-16">
+        <span class="text-lg font-semibold text-amber-700 tracking-wider">GET IN TOUCH</span>
+        <h2 class="text-4xl font-bold text-gray-900 mt-2">Contact Me</h2>
+        <div class="w-20 h-1 bg-amber-700 mx-auto mt-4"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-6">
+          Have a project in mind or want to discuss opportunities? Feel free to reach out!
+        </p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Contact Information -->
+        <div class="lg:w-5/12">
+          <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 h-full">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+              <i class="fas fa-envelope-open-text text-amber-700 mr-3"></i>
+              Contact Information
+            </h3>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="bg-amber-100 p-3 rounded-lg mr-4">
+                  <i class="fas fa-envelope text-amber-700"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                  <a href="mailto:santoshhadiya333@gmail.com" class="text-gray-600 hover:text-amber-700 transition">
+                    santoshhadiya333@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-amber-100 p-3 rounded-lg mr-4">
+                  <i class="fab fa-linkedin-in text-amber-700"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">LinkedIn</h4>
+                  <a href="https://www.linkedin.com/in/santosh-hadiya-3a2a4a2a3/" target="_blank"
+                    class="text-gray-600 hover:text-amber-700 transition">
+                    linkedin.com/in/santosh-hadiya
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-amber-100 p-3 rounded-lg mr-4">
+                  <i class="fab fa-github text-amber-700"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">GitHub</h4>
+                  <a href="https://github.com/santoshhadiya" target="_blank"
+                    class="text-gray-600 hover:text-amber-700 transition">
+                    github.com/santoshhadiya
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-amber-100 p-3 rounded-lg mr-4">
+                  <i class="fab fa-instagram text-amber-700"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">Instagram</h4>
+                  <a href="https://www.instagram.com/santoshhadiya33/" target="_blank"
+                    class="text-gray-600 hover:text-amber-700 transition">
+                    @santoshhadiya33
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-gray-200">
+              <h4 class="text-lg font-bold text-gray-800 mb-4">Availability</h4>
+              <div class="flex items-center text-gray-600">
+                <i class="fas fa-circle text-green-500 mr-2 text-sm"></i>
+                <span>Currently available for freelance work and collaborations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:w-7/12">
+          <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+              <i class="fas fa-paper-plane text-amber-700 mr-3"></i>
+              Send Me a Message
+            </h3>
+
+            <form id="contactForm" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                  <input type="text" id="name" name="name" required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition">
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                  <input type="email" id="email" name="email" required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition">
+                </div>
+              </div>
+
+              <div>
+                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                <input type="text" id="subject" name="subject" required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition">
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                <textarea id="message" name="message" rows="5" required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition"></textarea>
+              </div>
+
+              <button type="submit"
+                class="w-full px-6 py-4 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-800 transition-colors flex items-center justify-center">
+                <i class="fas fa-paper-plane mr-3"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-12">
@@ -150,18 +397,19 @@
           <h3 class="text-xl font-bold mb-4">Contact Info</h3>
           <ul class="space-y-2">
             <li class="flex items-center">
-              <img src="https://toppng.com/uploads/thumbnail/white-location-icon-png-location-logo-png-white-11562856661b4wsud8br0.png" 
-                   alt="Location" class="w-5 h-5 mr-2">
+              <img
+                src="https://toppng.com/uploads/thumbnail/white-location-icon-png-location-logo-png-white-11562856661b4wsud8br0.png"
+                alt="Location" class="w-5 h-5 mr-2">
               Ahmedabad, Gujarat
             </li>
             <li class="flex items-center">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD3ytIA6zKKo4N3qfvde_BYOlsQstSkNLewA&s" 
-                   alt="Education" class="w-5 h-5 mr-2">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD3ytIA6zKKo4N3qfvde_BYOlsQstSkNLewA&s"
+                alt="Education" class="w-5 h-5 mr-2">
               Som-lalit Institute of Computer Application
             </li>
             <li class="flex items-center">
-              <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/m_collection_png/512x512/plain/university.png" 
-                   alt="University" class="w-5 h-5 mr-2">
+              <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/m_collection_png/512x512/plain/university.png"
+                alt="University" class="w-5 h-5 mr-2">
               Gujarat University
             </li>
           </ul>
@@ -173,7 +421,34 @@
     </div>
   </footer>
 
-  <!-- JavaScript will be loaded here -->
+
   <script src="app.js"></script>
+  <script>
+
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    navToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      console.log({ name, email, subject, message });
+
+      alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+
+      // Reset form
+      this.reset();
+    });
+  </script>
 </body>
+
 </html>
