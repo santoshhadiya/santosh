@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     { name: "CSS", level: 90, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS__PteGo_WqYFOZZOskyatAlf7slaVSOrwOg&s" },
     { name: "JavaScript", level: 86, img: "https://cdn-icons-png.freepik.com/256/721/721671.png" },
     { name: "React Js", level: 80, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbodQVEoT0TbrcZxQsUDnBhAEdVBN9XvmNMQ&s" },
+    { name: "Node.js", level: 55, img: "https://img.icons8.com/win10/200/node-js.png" },
     { name: "SQL", level: 65, img: "https://static-00.iconduck.com/assets.00/database-sql-icon-1831x2048-iv4v6ry0.png" },
     { name: "Java", level: 65, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGDj8Myn1WOESjIurUBJOtsTdVc7wfWRNblQ&s" },
-    { name: "Bootstrap", level: 70, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIDSJXSf-avDYnXD_Ucz0scd86WoH88W5krA&s" },
+    { name: "Bootstrap", level: 60, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIDSJXSf-avDYnXD_Ucz0scd86WoH88W5krA&s" },
     { name: "Tailwind", level: 70, img: "https://static-00.iconduck.com/assets.00/tailwind-icon-512x309-a8f1tun1.png" }
   ];
 
@@ -75,32 +76,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   ];
 
-  // Initialize all components
+  // Initialize 
   renderSkills();
   renderProjects();
   renderContactInfo();
   setupSmoothScrolling();
 
- // Updated renderSkills function in app.js
+ //  renderSkills function 
 function renderSkills() {
   const skillGraph = document.getElementById('skillGraph');
   
+  // Clear existing content
+  skillGraph.innerHTML = '';
+  
   skills.forEach(skill => {
     const skillElement = document.createElement('div');
-    skillElement.className = 'bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 flex items-start';
+    skillElement.className = 'bg-white p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 flex items-start';
     
     skillElement.innerHTML = `
-      <div class="flex-shrink-0 bg-amber-50 p-3 rounded-lg mr-4">
-        <img src="${skill.img}" alt="${skill.name}" class="w-8 h-8 object-contain">
+      <div class="flex-shrink-0 bg-amber-50 p-2 sm:p-3 rounded-lg mr-3 sm:mr-4">
+        <img src="${skill.img}" alt="${skill.name}" class="w-6 h-6 sm:w-8 sm:h-8 object-contain">
       </div>
       <div class="flex-grow">
-        <h5 class="font-bold text-gray-800 mb-1">${skill.name}</h5>
-        <div class="flex justify-between items-center mb-2">
+        <h5 class="font-bold text-gray-800 text-sm sm:text-base mb-1">${skill.name}</h5>
+        <div class="flex justify-between items-center mb-1 sm:mb-2">
           <span class="text-xs text-gray-500">Proficiency</span>
-          <span class="text-sm font-bold text-amber-700">${skill.level}%</span>
+          <span class="text-xs sm:text-sm font-bold text-amber-700">${skill.level}%</span>
         </div>
-        <div class="w-full bg-gray-200 rounded-full h-2">
-          <div class="bg-amber-700 h-2 rounded-full" style="width: ${skill.level}%"></div>
+        <div class="w-full bg-gray-200 rounded-full h-1.5 sm:h-2">
+          <div class="bg-amber-700 h-full rounded-full" style="width: ${skill.level}%"></div>
         </div>
       </div>
     `;
@@ -109,7 +113,7 @@ function renderSkills() {
   });
 }
 
- // Updated renderProjects function in app.js
+ //renderProjects function
 function renderProjects() {
   const projectsGrid = document.getElementById('projectsGrid');
   
@@ -199,7 +203,7 @@ function renderProjects() {
     });
   }
 
-  // Adjust padding for fixed header
+  //padding for fixed header
   function adjustHeaderPadding() {
     const headerHeight = document.querySelector('header').offsetHeight;
     document.querySelector('section#home').style.paddingTop = `${headerHeight + 32}px`;
