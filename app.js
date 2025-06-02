@@ -32,6 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
       code:"https://github.com/santoshhadiya/CodeCollab",
     },
     {
+      title: "Library Management System",
+      description: "A modern library management system for efficient book tracking, lending, and user management.",
+      image: "LIBRARY.png",
+      link: "https://lms-santosh.onrender.com/",
+      tools: ["HTML", "CSS", "JavaScript", "React Js", "Node Js", "Express Js", "MongoDB"],
+      code:"https://github.com/santoshhadiya/library-management-system",
+    },
+    {
       title: "BootstrapNest",
       description: "A Bootstrap template with modern layouts and easy customization.",
       image: "BOOTSRAP IMG.png",
@@ -47,14 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
       tools: ["HTML", "CSS", "JavaScript"],
       code:"https://github.com/santoshhadiya/Restaurant",
     },
-    {
-      title: "Library Management System",
-      description: "A modern library management system for efficient book tracking, lending, and user management.",
-      image: "LIBRARY IMG.png",
-      link: "https://github.com/santoshhadiya/shoeshop-ecommerce.git",
-      tools: ["HTML", "CSS", "JavaScript", "React Js", "Node Js", "Express Js", "MongoDB"],
-      code:"",
-    }
+    
   ];
 
   // Contact Info Data
