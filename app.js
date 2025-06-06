@@ -40,6 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
       code:"https://github.com/santoshhadiya/library-management-system",
     },
     {
+      title: "ChatApp",
+      description: "Real-time chat app with room-based messaging, user lists, message history, and responsive UI using React, Socket.IO, Node.js.",
+      image: "ChatApp.png",
+      link: "http://chatapp-santosh.onrender.com/",
+      tools: ["HTML", "Tailwind", "React Js", "Node Js", "Express Js", "MongoDB", "Socket.io"],
+      code:"https://github.com/santoshhadiya/ChatApp",
+    },
+    {
       title: "BootstrapNest",
       description: "A Bootstrap template with modern layouts and easy customization.",
       image: "BOOTSRAP IMG.png",
