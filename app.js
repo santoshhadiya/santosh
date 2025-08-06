@@ -7,10 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     { name: "JavaScript", level: 86, img: "https://cdn-icons-png.freepik.com/256/721/721671.png" },
     { name: "React Js", level: 80, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbodQVEoT0TbrcZxQsUDnBhAEdVBN9XvmNMQ&s" },
     { name: "Node.js", level: 55, img: "https://img.icons8.com/win10/200/node-js.png" },
-    { name: "SQL", level: 65, img: "https://static-00.iconduck.com/assets.00/database-sql-icon-1831x2048-iv4v6ry0.png" },
+    { name: "SQL", level: 65, img: "https://cdn-icons-png.flaticon.com/512/4299/4299956.png" },
     { name: "Java", level: 65, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGDj8Myn1WOESjIurUBJOtsTdVc7wfWRNblQ&s" },
     { name: "Bootstrap", level: 60, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIDSJXSf-avDYnXD_Ucz0scd86WoH88W5krA&s" },
-    { name: "Tailwind", level: 70, img: "https://static-00.iconduck.com/assets.00/tailwind-icon-512x309-a8f1tun1.png" }
+    { name: "Tailwind", level: 70, img: "https://images.icon-icons.com/3398/PNG/512/css_tailwind_logo_icon_214735.png" },
+    { name:"Python", level:60, img:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Python_icon_%28black_and_white%29.svg/1200px-Python_icon_%28black_and_white%29.svg.png"},
+   {name:"Php", level:60, img:"https://pngimg.com/d/php_PNG20.png"}
   ];
 
   // Projects Data
