@@ -100,28 +100,20 @@ function renderSkills() {
   // Clear existing content
   skillGraph.innerHTML = '';
   
-  skills.forEach(skill => {
-    const skillElement = document.createElement('div');
-    skillElement.className = 'bg-white p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 flex items-start';
-    
-    skillElement.innerHTML = `
-      <div class="flex-shrink-0 bg-amber-50 p-2 sm:p-3 rounded-lg mr-3 sm:mr-4">
-        <img src="${skill.img}" alt="${skill.name}" class="w-6 h-6 sm:w-8 sm:h-8 object-contain">
-      </div>
-      <div class="flex-grow">
-        <h5 class="font-bold text-gray-800 text-sm sm:text-base mb-1">${skill.name}</h5>
-        <div class="flex justify-between items-center mb-1 sm:mb-2">
-          <span class="text-xs text-gray-500">Proficiency</span>
-          <span class="text-xs sm:text-sm font-bold text-amber-700">${skill.level}%</span>
-        </div>
-        <div class="w-full bg-gray-200 rounded-full h-1.5 sm:h-2">
-          <div class="bg-amber-700 h-full rounded-full" style="width: ${skill.level}%"></div>
-        </div>
-      </div>
-    `;
-    
-    skillGraph.appendChild(skillElement);
-  });
+ skills.forEach(skill => {
+  const skillElement = document.createElement('div');
+  
+  // New classes for a modern "pill" design
+  skillElement.className = 'flex items-center gap-3 rounded-full bg-slate-50 px-4 py-2 border border-slate-200 hover:shadow-sm hover:border-amber-400 transition-all';
+  
+  // Simplified HTML structure
+  skillElement.innerHTML = `
+    <img src="${skill.img}" alt="${skill.name}" class="h-6 w-6 object-contain">
+    <span class="font-medium text-slate-700">${skill.name}</span>
+  `;
+  
+  skillGraph.appendChild(skillElement);
+});
 }
 
  //renderProjects function
