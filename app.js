@@ -18,6 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   const projects = [
     {
+      title: "QuickCart",
+      description: "QuickCart is a e-commerce website built using Next.js. It features a minimal, modern & responsive layout to help you launch your store with ease.",
+      image: "QuickCart.png",
+      link: "https://quick-cart-ec8h.vercel.app/",
+      tools: ["Next.js"],
+      code:"https://github.com/santoshhadiya/QuickCart",
+    },
+    {
       title: "SkillForge",
       description: "A comprehensive LMS built for universities, businesses, and educators to manage courses, quizzes, and certifications.",
       image: "LMS IMG (1).png",
@@ -26,20 +34,28 @@ document.addEventListener('DOMContentLoaded', function() {
       code:"https://github.com/santoshhadiya/edemy",
     },
     {
-      title: "CodeCollab",
-      description: "A web-based application where multiple users can join a room, write code together in real time.",
-      image: "CodeCollab.png",
-      link: "https://codecollab-frontend-kgxh.onrender.com",
-      tools: ["HTML", "Tailwind", "JavaScript", "ReactJs", "NodeJs", "ExpressJs", "Socket.io"],
-      code:"https://github.com/santoshhadiya/CodeCollab",
-    },
-    {
       title: "Library Management System",
       description: "A modern library management system for efficient book tracking, lending, and user management.",
       image: "LIBRARY.png",
       link: "https://lms-santosh.onrender.com/",
       tools: ["HTML", "CSS", "JavaScript", "React Js", "Node Js", "Express Js", "MongoDB"],
       code:"https://github.com/santoshhadiya/library-management-system",
+    },
+     {
+      title: "GYM Managent System",
+      description: "GYM Management System for Songar's GYM built with React.js,Node.js, featuring admin dashboards, member & trainer management, attendance tracking, and scalable architecture.",
+      image: "GMS.png",
+      link: "https://songars-gym.vercel.app/",
+      tools: ["HTML", "Tailwind", "JavaScript", "ReactJs", "NodeJs", "ExpressJs", "Socket.io"],
+      code:"https://github.com/santoshhadiya/Gym-Management-System",
+    },
+     {
+      title: "CodeCollab",
+      description: "A web-based application where multiple users can join a room, write code together in real time.",
+      image: "CodeCollab.png",
+      link: "https://codecollab-frontend-kgxh.onrender.com",
+      tools: ["HTML", "Tailwind", "JavaScript", "ReactJs", "NodeJs", "ExpressJs", "Socket.io"],
+      code:"https://github.com/santoshhadiya/CodeCollab",
     },
     {
       title: "ChatApp",

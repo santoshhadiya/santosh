@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santosh Hadiya | Full Stack Developer</title>
-    
+
     <!-- Fonts: Space Grotesk (Tech) & Outfit (Modern) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -56,7 +59,8 @@
             background-color: #020617;
             color: #f8fafc;
             overflow-x: hidden;
-            cursor: none; /* Hiding default cursor for custom one */
+            cursor: none;
+            /* Hiding default cursor for custom one */
         }
 
         /* --- CUSTOM CURSOR --- */
@@ -88,7 +92,7 @@
             width: 40px;
             height: 40px;
         }
-        
+
         /* Hover state for links/buttons */
         body.hovering .cursor-outline {
             width: 60px;
@@ -132,13 +136,16 @@
         ::-webkit-scrollbar {
             width: 10px;
         }
+
         ::-webkit-scrollbar-track {
             background: #020617;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #334155;
             border-radius: 5px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #475569;
         }
@@ -149,21 +156,38 @@
             transform: translateY(50px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
+
         .reveal-section.active {
             opacity: 1;
             transform: translateY(0);
         }
-        
-        .stagger-delay-1 { transition-delay: 100ms; }
-        .stagger-delay-2 { transition-delay: 200ms; }
-        .stagger-delay-3 { transition-delay: 300ms; }
+
+        .stagger-delay-1 {
+            transition-delay: 100ms;
+        }
+
+        .stagger-delay-2 {
+            transition-delay: 200ms;
+        }
+
+        .stagger-delay-3 {
+            transition-delay: 300ms;
+        }
 
         @media (max-width: 768px) {
-            .cursor-dot, .cursor-outline { display: none; }
-            body { cursor: auto; }
+
+            .cursor-dot,
+            .cursor-outline {
+                display: none;
+            }
+
+            body {
+                cursor: auto;
+            }
         }
     </style>
 </head>
+
 <body class="selection:bg-amber-500 selection:text-white">
 
     <!-- Custom Cursor Elements -->
@@ -172,13 +196,16 @@
 
     <!-- Background Gradients -->
     <div class="fixed inset-0 z-0 pointer-events-none">
-        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-amber-500/10 blur-[120px]"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-blue-600/10 blur-[120px]"></div>
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-amber-500/10 blur-[120px]">
+        </div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-blue-600/10 blur-[120px]">
+        </div>
         <div class="absolute inset-0 bg-grid-pattern opacity-20"></div>
     </div>
 
     <!-- Navigation -->
-    <header class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md border-b border-white/5" id="navbar">
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md border-b border-white/5"
+        id="navbar">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-mono font-bold tracking-tighter text-white z-50 interactive-hover">
                 SANTOSH<span class="text-amber-500">.DEV</span>
@@ -186,11 +213,21 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden lg:flex items-center gap-8">
-                <a href="#home" class="text-sm font-medium text-slate-300 hover:text-white transition-colors nav-link interactive-hover">01. Home</a>
-                <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors nav-link interactive-hover">02. About</a>
-                <a href="#skills" class="text-sm font-medium text-slate-300 hover:text-white transition-colors nav-link interactive-hover">03. Tech</a>
-                <a href="#work" class="text-sm font-medium text-slate-300 hover:text-white transition-colors nav-link interactive-hover">04. Work</a>
-                <a href="#contact" class="px-6 py-2.5 bg-amber-500 text-dark-950 font-bold text-sm rounded-full hover:bg-amber-400 transition-all shadow-[0_0_20px_rgba(245,158,11,0.3)] interactive-hover">Let's Talk</a>
+                <a href="#home"
+                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors nav-link interactive-hover">01.
+                    Home</a>
+                <a href="#about"
+                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors nav-link interactive-hover">02.
+                    About</a>
+                <a href="#skills"
+                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors nav-link interactive-hover">03.
+                    Tech</a>
+                <a href="#work"
+                    class="text-sm font-medium text-slate-300 hover:text-white transition-colors nav-link interactive-hover">04.
+                    Work</a>
+                <a href="#contact"
+                    class="px-6 py-2.5 bg-amber-500 text-dark-950 font-bold text-sm rounded-full hover:bg-amber-400 transition-all shadow-[0_0_20px_rgba(245,158,11,0.3)] interactive-hover">Let's
+                    Talk</a>
             </nav>
 
             <!-- Mobile Menu Button -->
@@ -201,7 +238,8 @@
     </header>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobileMenu" class="fixed inset-0 bg-dark-950/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-10">
+    <div id="mobileMenu"
+        class="fixed inset-0 bg-dark-950/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-10">
         <a href="#home" class="text-3xl font-mono font-bold text-white hover:text-amber-500 mobile-link">HOME</a>
         <a href="#about" class="text-3xl font-mono font-bold text-white hover:text-amber-500 mobile-link">ABOUT</a>
         <a href="#work" class="text-3xl font-mono font-bold text-white hover:text-amber-500 mobile-link">WORK</a>
@@ -209,34 +247,42 @@
     </div>
 
     <main class="relative z-10">
-        
+
         <!-- Hero Section -->
         <section id="home" class="min-h-screen flex items-center pt-20 px-6 relative">
             <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
-                
+
                 <div class="order-2 lg:order-1 space-y-8">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/30 bg-amber-500/5 text-amber-500 text-sm font-mono animate-fade-in-up">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/30 bg-amber-500/5 text-amber-500 text-sm font-mono animate-fade-in-up">
                         <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
                         Available for new projects
                     </div>
-                    
+
                     <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white reveal-section active">
-                        Building <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600 text-glow">Digital</span> <br>
+                        Building <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600 text-glow">Digital</span>
+                        <br>
                         Experiences.
                     </h1>
-                    
+
                     <div class="h-20 reveal-section stagger-delay-1 active"> <!-- Fixed height for typewriter -->
                         <p class="text-xl md:text-2xl text-slate-400 font-light">
-                            I am <span class="text-white font-semibold">Santosh Hadiya</span>, a <span id="typewriter" class="text-amber-500 font-mono border-r-2 border-amber-500 pr-1"></span>
+                            I am <span class="text-white font-semibold">Santosh Hadiya</span>, a <span id="typewriter"
+                                class="text-amber-500 font-mono border-r-2 border-amber-500 pr-1"></span>
                         </p>
                     </div>
 
                     <div class="flex flex-wrap gap-4 pt-4 reveal-section stagger-delay-2 active">
-                        <a href="#work" class="group relative px-8 py-4 bg-white text-dark-950 font-bold rounded-lg overflow-hidden transition-all interactive-hover">
+                        <a href="#work"
+                            class="group relative px-8 py-4 bg-white text-dark-950 font-bold rounded-lg overflow-hidden transition-all interactive-hover">
                             <span class="relative z-10 group-hover:text-white transition-colors">View Projects</span>
-                            <div class="absolute inset-0 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></div>
+                            <div
+                                class="absolute inset-0 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out">
+                            </div>
                         </a>
-                        <a href="#contact" class="px-8 py-4 border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 transition-all interactive-hover">
+                        <a href="#contact"
+                            class="px-8 py-4 border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 transition-all interactive-hover">
                             Contact Me
                         </a>
                     </div>
@@ -250,17 +296,20 @@
                     <div class="relative w-72 h-72 md:w-[450px] md:h-[450px]">
                         <!-- Decorative spinning rings -->
                         <div class="absolute inset-0 border border-amber-500/20 rounded-[50px] animate-spin-slow"></div>
-                        <div class="absolute inset-4 border border-white/10 rounded-[50px] animate-spin-slow" style="animation-direction: reverse;"></div>
-                        
+                        <div class="absolute inset-4 border border-white/10 rounded-[50px] animate-spin-slow"
+                            style="animation-direction: reverse;"></div>
+
                         <!-- Image Container -->
-                        <div class="absolute inset-8 rounded-[50px] overflow-hidden border-4 border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] bg-dark-800">
-                             <img src="santosh_theme_img2.jpg" alt="Santosh" 
+                        <div
+                            class="absolute inset-8 rounded-[50px] overflow-hidden  shadow-[0_0_50px_rgba(0,0,0,0.5)] bg-dark-800">
+                            <img src="santosh_theme_img2.jpg" alt="Santosh"
                                 class="w-full h-full object-cover opacity-90 hover:scale-110 transition-transform duration-700"
                                 onerror="this.src='https://ui-avatars.com/api/?name=Santosh+Hadiya&background=0f172a&color=f59e0b&size=512&font-size=0.33'">
                         </div>
 
                         <!-- Floating Badge -->
-                        <div class="absolute bottom-10 -left-4 bg-dark-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-2xl animate-bounce" style="animation-duration: 3s;">
+                        <div class="absolute bottom-10 -left-4 bg-dark-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-2xl animate-bounce"
+                            style="animation-duration: 3s;">
                             <div class="flex items-center gap-3">
                                 <div class="text-2xl text-amber-500"><i class="fab fa-react"></i></div>
                                 <div>
@@ -274,7 +323,8 @@
             </div>
 
             <!-- Scroll Indicator -->
-            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:flex flex-col items-center gap-2 opacity-50">
+            <div
+                class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:flex flex-col items-center gap-2 opacity-50">
                 <span class="text-xs text-slate-400 uppercase tracking-widest">Scroll</span>
                 <i class="fas fa-chevron-down text-white"></i>
             </div>
@@ -284,47 +334,57 @@
         <section id="about" class="py-32 px-6 relative">
             <div class="container mx-auto max-w-6xl">
                 <div class="mb-16 reveal-section">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">About <span class="text-amber-500">Me.</span></h2>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">About <span
+                            class="text-amber-500">Me.</span></h2>
                     <div class="h-1 w-20 bg-amber-500"></div>
                 </div>
 
                 <!-- Bento Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    
+
                     <!-- Bio Card (Large) -->
                     <div class="md:col-span-2 lg:col-span-2 row-span-2 glass-card rounded-3xl p-8 reveal-section">
                         <div class="h-full flex flex-col justify-between">
                             <div>
-                                <div class="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center text-amber-500 mb-6">
+                                <div
+                                    class="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center text-amber-500 mb-6">
                                     <i class="fas fa-user-astronaut text-xl"></i>
                                 </div>
                                 <h3 class="text-2xl font-bold text-white mb-4">The Developer</h3>
                                 <p class="text-slate-400 leading-relaxed mb-6">
-                                    I'm a BCA student and full-stack enthusiast who loves turning complex problems into beautiful interfaces. I don't just write code; I design solutions. My focus is on scalability, performance, and accessible design.
+                                    I'm a BCA student and full-stack enthusiast who loves turning complex problems into
+                                    beautiful interfaces. I don't just write code; I design solutions. My focus is on
+                                    scalability, performance, and accessible design.
                                 </p>
                             </div>
                             <div class="flex gap-4">
-                                <a href="https://drive.google.com/file/d/1GoaPpr-hQZui34PGqlE6iBY_hKNSA-z4/view?usp=sharing" target="_blank" class="text-white border-b border-amber-500 hover:text-amber-500 transition-colors pb-1 interactive-hover">Download Resume</a>
+                                <a href="https://drive.google.com/file/d/1GoaPpr-hQZui34PGqlE6iBY_hKNSA-z4/view?usp=sharing"
+                                    target="_blank"
+                                    class="text-white border-b border-amber-500 hover:text-amber-500 transition-colors pb-1 interactive-hover">Download
+                                    Resume</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Stat Card 1 -->
-                    <div class="glass-card rounded-3xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/5 transition-colors reveal-section stagger-delay-1">
+                    <div
+                        class="glass-card rounded-3xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/5 transition-colors reveal-section stagger-delay-1">
                         <span class="text-4xl font-bold text-amber-500 mb-2">90%</span>
                         <span class="text-sm text-slate-400 uppercase tracking-wider">Frontend Mastery</span>
                     </div>
 
                     <!-- Stat Card 2 -->
-                    <div class="glass-card rounded-3xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/5 transition-colors reveal-section stagger-delay-2">
+                    <div
+                        class="glass-card rounded-3xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/5 transition-colors reveal-section stagger-delay-2">
                         <span class="text-4xl font-bold text-blue-500 mb-2">75%</span>
                         <span class="text-sm text-slate-400 uppercase tracking-wider">Backend Logic</span>
                     </div>
 
                     <!-- Tech Stack Marquee (Wide) -->
-                    <div class="md:col-span-3 lg:col-span-2 glass-card rounded-3xl p-8 overflow-hidden relative reveal-section stagger-delay-1">
+                    <div
+                        class="md:col-span-3 lg:col-span-2 glass-card rounded-3xl p-8 overflow-hidden relative reveal-section stagger-delay-1">
                         <h3 class="text-lg font-bold text-white mb-6">Technologies</h3>
-                        
+
                         <!-- Auto-scrolling list of skills -->
                         <div class="flex flex-wrap gap-3" id="skill-pills">
                             <!-- Injected via JS -->
@@ -335,21 +395,29 @@
                     <div class="md:col-span-1 lg:col-span-2 glass-card rounded-3xl p-8 reveal-section stagger-delay-2">
                         <h3 class="text-lg font-bold text-white mb-6">Certifications</h3>
                         <div class="space-y-4">
-                            <a href="https://drive.google.com/file/d/1jcxqSKoLyE0V98bV00ItZBrTDCzOuOsO/view?usp=sharing" target="_blank" class="flex items-center gap-4 group interactive-hover">
-                                <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
-                                    <img src="https://logos-world.net/wp-content/uploads/2021/08/Deloitte-Symbol.png" class="w-6" alt="Deloitte">
+                            <a href="https://drive.google.com/file/d/1jcxqSKoLyE0V98bV00ItZBrTDCzOuOsO/view?usp=sharing"
+                                target="_blank" class="flex items-center gap-4 group interactive-hover">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                                    <img src="https://logos-world.net/wp-content/uploads/2021/08/Deloitte-Symbol.png"
+                                        class="w-6" alt="Deloitte">
                                 </div>
                                 <div>
-                                    <div class="text-white font-medium group-hover:text-amber-500 transition-colors">Data Analytics</div>
+                                    <div class="text-white font-medium group-hover:text-amber-500 transition-colors">
+                                        Data Analytics</div>
                                     <div class="text-xs text-slate-500">Deloitte</div>
                                 </div>
                             </a>
-                            <a href="https://drive.google.com/file/d/19NmkBVcYurFrjsuVlpu7YbNITK7iCGke/view?usp=sharing" target="_blank" class="flex items-center gap-4 group interactive-hover">
-                                <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/523px-Tata_logo.svg.png" class="w-6" alt="TATA">
+                            <a href="https://drive.google.com/file/d/19NmkBVcYurFrjsuVlpu7YbNITK7iCGke/view?usp=sharing"
+                                target="_blank" class="flex items-center gap-4 group interactive-hover">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/523px-Tata_logo.svg.png"
+                                        class="w-6" alt="TATA">
                                 </div>
                                 <div>
-                                    <div class="text-white font-medium group-hover:text-amber-500 transition-colors">GenAI Analytics</div>
+                                    <div class="text-white font-medium group-hover:text-amber-500 transition-colors">
+                                        GenAI Analytics</div>
                                     <div class="text-xs text-slate-500">TATA</div>
                                 </div>
                             </a>
@@ -365,10 +433,13 @@
             <div class="container mx-auto max-w-7xl">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal-section">
                     <div>
-                        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Selected <span class="text-amber-500">Works.</span></h2>
-                        <p class="text-slate-400 max-w-lg">A showcase of interactive projects, from Learning Management Systems to Real-time Communication platforms.</p>
+                        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Selected <span
+                                class="text-amber-500">Works.</span></h2>
+                        <p class="text-slate-400 max-w-lg">A showcase of interactive projects, from Learning Management
+                            Systems to Real-time Communication platforms.</p>
                     </div>
-                    <a href="https://github.com/santoshhadiya" target="_blank" class="hidden md:flex items-center gap-3 text-white hover:text-amber-500 transition-colors interactive-hover mt-6 md:mt-0">
+                    <a href="https://github.com/santoshhadiya" target="_blank"
+                        class="hidden md:flex items-center gap-3 text-white hover:text-amber-500 transition-colors interactive-hover mt-6 md:mt-0">
                         <span>View GitHub Profile</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -379,7 +450,8 @@
                 </div>
 
                 <div class="mt-12 text-center md:hidden">
-                    <a href="https://github.com/santoshhadiya" class="inline-block px-6 py-3 border border-white/20 rounded-lg text-white">View GitHub</a>
+                    <a href="https://github.com/santoshhadiya"
+                        class="inline-block px-6 py-3 border border-white/20 rounded-lg text-white">View GitHub</a>
                 </div>
             </div>
         </section>
@@ -391,7 +463,8 @@
                     <p class="text-amber-500 font-mono text-sm mb-4">WHAT'S NEXT?</p>
                     <h2 class="text-5xl md:text-6xl font-bold text-white mb-6">Let's Work Together</h2>
                     <p class="text-slate-400 max-w-xl mx-auto text-lg">
-                        I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                        I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
+                        I'll try my best to get back to you!
                     </p>
                 </div>
 
@@ -400,35 +473,49 @@
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label class="text-sm font-mono text-slate-400 ml-1">NAME</label>
-                                <input type="text" id="name" required class="w-full bg-dark-950/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all interactive-hover" >
+                                <input type="text" id="name" required
+                                    class="w-full bg-dark-950/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all interactive-hover">
                             </div>
                             <div class="space-y-2">
                                 <label class="text-sm font-mono text-slate-400 ml-1">EMAIL</label>
-                                <input type="email" id="email" required class="w-full bg-dark-950/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all interactive-hover" >
+                                <input type="email" id="email" required
+                                    class="w-full bg-dark-950/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all interactive-hover">
                             </div>
                         </div>
                         <div class="space-y-2">
                             <label class="text-sm font-mono text-slate-400 ml-1">SUBJECT</label>
-                            <input type="text" id="subject" required class="w-full bg-dark-950/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all interactive-hover" placeholder="Project Inquiry">
+                            <input type="text" id="subject" required
+                                class="w-full bg-dark-950/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all interactive-hover"
+                                placeholder="Project Inquiry">
                         </div>
                         <div class="space-y-2">
                             <label class="text-sm font-mono text-slate-400 ml-1">MESSAGE</label>
-                            <textarea id="message" rows="5" required class="w-full bg-dark-950/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all interactive-hover" placeholder="Tell me about your project..."></textarea>
+                            <textarea id="message" rows="5" required
+                                class="w-full bg-dark-950/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all interactive-hover"
+                                placeholder="Tell me about your project..."></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-orange-500/20 transform hover:-translate-y-1 transition-all interactive-hover">
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-orange-500/20 transform hover:-translate-y-1 transition-all interactive-hover">
                             SEND MESSAGE
                         </button>
                     </form>
                 </div>
 
                 <div class="mt-16 flex flex-col items-center gap-6 reveal-section stagger-delay-2">
-                    <a href="mailto:santoshhadiya333@gmail.com" class="text-2xl md:text-3xl font-bold text-slate-300 hover:text-amber-500 transition-colors interactive-hover">
+                    <a href="mailto:santoshhadiya333@gmail.com"
+                        class="text-2xl md:text-3xl font-bold text-slate-300 hover:text-amber-500 transition-colors interactive-hover">
                         santoshhadiya333@gmail.com
                     </a>
                     <div class="flex gap-8">
-                        <a href="https://www.instagram.com/santoshhadiya33/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-2xl interactive-hover"><i class="fab fa-instagram"></i></a>
-                        <a href="https://github.com/santoshhadiya" target="_blank" class="text-slate-400 hover:text-white transition-colors text-2xl interactive-hover"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/santosh-hadiya-3a2a4a2a3/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-2xl interactive-hover"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/santoshhadiya33/" target="_blank"
+                            class="text-slate-400 hover:text-white transition-colors text-2xl interactive-hover"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/santoshhadiya" target="_blank"
+                            class="text-slate-400 hover:text-white transition-colors text-2xl interactive-hover"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/santosh-hadiya-3a2a4a2a3/" target="_blank"
+                            class="text-slate-400 hover:text-white transition-colors text-2xl interactive-hover"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -442,7 +529,7 @@
     <!-- Logic -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
+
             // --- DATA CONFIGURATION ---
             const skills = [
                 { name: "React", icon: "fab fa-react", color: "text-blue-400" },
@@ -459,12 +546,28 @@
 
             const projects = [
                 {
+                    title: "QuickCart",
+                    desc: "QuickCart is a e-commerce website built using Next.js. It features a minimal, modern & responsive layout to help you launch your store with ease.",
+                    img: "QuickCart.png",
+                    link: "https://quick-cart-ec8h.vercel.app/",
+                    tags: ["Next.js"],
+                    code: "https://github.com/santoshhadiya/QuickCart",
+                },
+                {
                     title: "SkillForge LMS",
                     desc: "A comprehensive Learning Management System for universities.",
                     tags: ["React", "CSS", "HTML"],
                     img: "LMS IMG (1).png",
                     link: "https://santoshhadiya.github.io/edemy/",
                     code: "https://github.com/santoshhadiya/edemy"
+                },
+                {
+                    title: "GYM Management System",
+                    desc: "GYM Management System for Songar's GYM built with React.js,Node.js, featuring admin dashboards, member & trainer management, attendance tracking, and scalable architecture.",
+                    img: "GMS.png",
+                    link: "https://songars-gym.vercel.app/",
+                    tags: ["ReactJs", "NodeJs", "ExpressJs", "Socket.io"],
+                    code: "https://github.com/santoshhadiya/Gym-Management-System",
                 },
                 {
                     title: "CodeCollab",
@@ -494,11 +597,11 @@
                     title: "Restaurant UI",
                     desc: "Elegant restaurant landing page with reservation system.",
                     tags: ["HTML", "CSS", "JS"],
-                    img: "POTO IMG.png",
+                    img: "POTO IMG1.png",
                     link: "https://santoshhadiya.github.io/Restaurant/",
                     code: "https://github.com/santoshhadiya/Restaurant"
                 },
-                 {
+                {
                     title: "BootstrapNest",
                     desc: "A versatile Bootstrap template with modern layouts.",
                     tags: ["Bootstrap", "HTML"],
@@ -537,11 +640,11 @@
             // --- RENDER PROJECTS ---
             const projectContainer = document.getElementById('projects-container');
             const fallbackImg = 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80';
-            
+
             projects.forEach((proj, index) => {
                 const card = document.createElement('div');
                 card.className = `group relative rounded-2xl overflow-hidden bg-dark-900 border border-white/5 hover:border-amber-500/30 transition-all duration-500 reveal-section ${index % 2 !== 0 ? 'stagger-delay-1' : ''}`;
-                
+
                 card.innerHTML = `
                     <div class="h-64 overflow-hidden relative">
                         <div class="absolute inset-0 bg-dark-950/20 group-hover:bg-transparent transition-colors z-10"></div>
@@ -587,7 +690,7 @@
 
             function typeWriter() {
                 const currentRole = roles[roleIndex];
-                
+
                 if (isDeleting) {
                     typeElement.textContent = currentRole.substring(0, charIndex - 1);
                     charIndex--;
@@ -625,7 +728,7 @@
             // --- CUSTOM CURSOR LOGIC ---
             const cursorDot = document.querySelector('.cursor-dot');
             const cursorOutline = document.querySelector('.cursor-outline');
-            
+
             window.addEventListener('mousemove', (e) => {
                 const posX = e.clientX;
                 const posY = e.clientY;
@@ -671,13 +774,13 @@
             });
 
             // Contact Form Simulation
-             document.getElementById('contactForm').addEventListener('submit', function (e) {
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
                 e.preventDefault();
                 const btn = this.querySelector('button');
                 const originalText = btn.innerHTML;
-                
+
                 btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Sending...';
-                
+
                 setTimeout(() => {
                     alert('Message sent successfully!');
                     this.reset();
@@ -687,4 +790,5 @@
         });
     </script>
 </body>
+
 </html>
